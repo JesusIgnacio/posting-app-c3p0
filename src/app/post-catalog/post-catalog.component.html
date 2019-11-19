@@ -1,9 +1,10 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" >
-
+    
     <ng-container matColumnDef="story_tittle">
       <th mat-header-cell *matHeaderCellDef> Title </th>
-      <td mat-cell *matCellDef="let element"> {{element.story_tittle}} by {{element.story_tittle}} </td>
+      <td mat-cell *matCellDef="let element"> <span style="cursor:pointer;" (click)="open_link(element.story_url)">
+          <label style="color: #333; font-size: 13pt">{{element.story_title}}</label> by <label style="color: #999">{{element.story_author}}</label></span> </td>
     </ng-container>
 
     <!-- Name Column -->
@@ -20,5 +21,4 @@
     <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
   </table>
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

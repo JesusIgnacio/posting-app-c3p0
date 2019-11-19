@@ -1,3 +1,10 @@
 table {
   width: 100%;
 }
+.mat-row{
+  background-color: #fff;
+  border: 1px #ccc
+}
+.mat-row:hover {
+  background-color: #fafafa;
+}
