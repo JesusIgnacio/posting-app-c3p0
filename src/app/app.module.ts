@@ -8,11 +8,13 @@ import { PostCatalogComponent } from './post-catalog/post-catalog.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
+import { GetDayReferencePipe } from './get-day-reference.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostCatalogComponent
+    PostCatalogComponent,
+    GetDayReferencePipe
   ],
   imports: [
     BrowserModule,
