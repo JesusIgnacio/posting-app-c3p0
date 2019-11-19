@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { GetDayReferencePipe } from './get-day-reference.pipe';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { PostBannerComponent } from './post-banner/post-banner.component'; 
 @NgModule({
   declarations: [
     AppComponent,
     PostCatalogComponent,
-    GetDayReferencePipe
+    GetDayReferencePipe,
+    PostBannerComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { GetDayReferencePipe } from './get-day-reference.pipe';
     MatTableModule,
     HttpClientModule,
     MatPaginatorModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
