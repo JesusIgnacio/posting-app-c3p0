@@ -7,4 +7,11 @@ table {
 }
 .mat-row:hover {
   background-color: #fafafa;
+  cursor: pointer;
+}
+.mat-flat-button{
+  display: none;
+}
+.mat-row:hover .mat-flat-button{
+  display: inline;
 }

@@ -10,7 +10,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { GetDayReferencePipe } from './get-day-reference.pipe';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { PostBannerComponent } from './post-banner/post-banner.component'; 
+import { PostBannerComponent } from './post-banner/post-banner.component';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { PostBannerComponent } from './post-banner/post-banner.component';
     HttpClientModule,
     MatPaginatorModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

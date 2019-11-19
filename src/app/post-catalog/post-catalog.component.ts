@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Post } from '../post';
 import { Router } from '@angular/router';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-post-catalog',
@@ -14,11 +15,13 @@ export class PostCatalogComponent implements OnInit {
   dataSource  = new MatTableDataSource<Post>();
   tableColumns: string[] = ['story_tittle', 'created_at', 'action'];
   constructor(private postService: PostService, private router: Router) { }
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   ngOnInit() {
+    this.load();
+  }
+
+  load() {
     this.postService.getPosts().subscribe(result => {
       this.dataSource = result.data;
-      this.dataSource.paginator = this.paginator;
     });
   }
 
@@ -26,7 +29,11 @@ export class PostCatalogComponent implements OnInit {
     this.postService.deactivatePost(post.story_id).subscribe(result => {
       console.log(result);
     });
-    this.router.navigate(['/']);
+    this.load();
+  }
+
+  open_link(link) {
+    this.router.navigate([link]);
   }
 
 }
