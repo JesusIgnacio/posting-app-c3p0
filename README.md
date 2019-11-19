@@ -1,27 +1,25 @@
-# PostingAppC3p0
+# Posting App C3P0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+Container Application to consume and show information from [Hacker News API](https://hn.algolia.com). This Application is the  [Posting App R2D2](https://github.com/JesusIgnacio/posting-app-r2d2) view's.  You know what i mean ? C3P0 + R2D2 , unconditional friends from Stars Wars. you've a idea? no? How could be it possible? Maybe you're in the wrong place. 
 
-## Development server
+## Stack
+* [Angular](https://angular.io/)
+* [Angular CLI](https://cli.angular.io/)
+* [Angular Material](https://material.angular.io/)
+* [Docker](https://www.docker.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Download and Installation
 
-## Code scaffolding
+Let's get ready to rumble:
+* clone this repository on your local machine.
+* go to source folder.
+* execute this commands on terminal:
+  * ```docker build -t posting-c3p0:dev .``` // This command take a few minutes, so , go to write on google 'pacman' and have fun meantime :D.
+  * ```docker run -p 4201:4200 -t posting-c3p0:dev```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+So there is [Posting APP View](http://localhost:4201) ...i hope so :). 
 
-## Build
+And remember if you don't have R2D2 running, you don't see any row in the list.
+If you have any questions, let me know.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+JCastillo
