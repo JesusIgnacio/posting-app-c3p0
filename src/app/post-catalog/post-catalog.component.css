@@ -1,17 +1,94 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.loading-container p {
+  margin-top: 16px;
+  color: #666;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  color: #f44336;
+}
+
+.error-container mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.error-container p {
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.title-cell {
+  max-width: 600px;
+}
+
+.story-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 8px 0;
+}
+
+.story-link:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+
+.story-title {
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.story-author {
+  color: #999;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.table-row:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.mat-elevation-z8 {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 table {
   width: 100%;
 }
-.mat-row{
-  background-color: #fff;
-  border: 1px #ccc
+
+::ng-deep .success-snackbar {
+  background-color: #4caf50 !important;
+  color: white !important;
 }
-.mat-row:hover {
-  background-color: #fafafa;
-  cursor: pointer;
-}
-.mat-flat-button{
-  display: none;
-}
-.mat-row:hover .mat-flat-button{
-  display: inline;
+
+::ng-deep .error-snackbar {
+  background-color: #f44336 !important;
+  color: white !important;
 }

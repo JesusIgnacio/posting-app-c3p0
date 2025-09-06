@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'getDayReference'
+  name: 'getDayReference',
+  standalone: true
 })
 export class GetDayReferencePipe implements PipeTransform {
   transform(value: any, ...args: any[]): any {
